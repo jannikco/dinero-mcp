@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "status": "ready",
+  "verification": "mock-only",
+  "releaseEligible": true,
+  "maintainer": "jannikco",
+  "license": "MIT",
+  "sourceRevision": "6ccb875db90d6ed2e1471ddabfe7d007724b7d70fe30b0d9958bec5bef403785",
+  "evidence": [
+    "Source-backed provider setup metadata",
+    "Offline configuration and MCP protocol tests"
+  ],
+  "provenance": [
+    "https://api.dinero.dk/openapi/v1/swagger.json"
+  ],
+  "id": "dinero-mcp",
+  "kind": "mcp-setup",
+  "product": "pipmcp",
+  "title": "Dinero MCP setup and connection checker",
+  "description": "Generate Dinero MCP client configuration, inspect available tools and validate hosted endpoint access through PipMCP.",
+  "operationIds": [],
+  "appSlug": "dinero",
+  "appName": "Dinero",
+  "providerDocs": "https://api.dinero.dk/openapi/v1/swagger.json",
+  "providerWebsite": "https://www.dinero.dk/",
+  "authentication": {
+    "type": "token_exchange",
+    "requiredCredentialFields": [
+      "provider_exchange_credentials"
+    ],
+    "requiredHeaderNames": [],
+    "helpUrl": "https://developer.dinero.dk/documentation/personal-integration/",
+    "tenantRequired": false,
+    "accountParameterNames": [
+      "organization_id"
+    ]
+  },
+  "attributionSlug": "github-dinero-mcp",
+  "factory": "leadadapter-pipmcp",
+  "generatorVersion": 1
+}
