@@ -1,39 +1,60 @@
 {
   "schemaVersion": 1,
-  "status": "ready",
-  "verification": "mock-only",
-  "releaseEligible": true,
-  "maintainer": "jannikco",
-  "license": "MIT",
-  "sourceRevision": "6ccb875db90d6ed2e1471ddabfe7d007724b7d70fe30b0d9958bec5bef403785",
-  "evidence": [
-    "Source-backed provider setup metadata",
-    "Offline configuration and MCP protocol tests"
-  ],
-  "provenance": [
-    "https://api.dinero.dk/openapi/v1/swagger.json"
-  ],
   "id": "dinero-mcp",
   "kind": "mcp-setup",
   "product": "pipmcp",
   "title": "Dinero MCP setup and connection checker",
-  "description": "Generate Dinero MCP client configuration, inspect available tools and validate hosted endpoint access through PipMCP.",
+  "description": "Prepare Dinero for AI workflows with a PipMCP setup doctor, authenticated discovery and coding-agent instructions.",
+  "status": "ready",
+  "verification": "mock-only",
+  "releaseEligible": false,
   "operationIds": [],
+  "maintainer": "jannikco",
+  "license": "MIT",
+  "attributionSlug": "github-dinero-mcp",
+  "sourceRevision": "4e1053b6e755a21c233ff44de91946d8039fe7c72c2290b069032aa0c23a4a32",
+  "qualityVersion": 2,
+  "artifactType": "setup",
+  "evidence": [
+    "Gateway HTTP transport fixtures",
+    "Generated stdio wrapper discovery/call fixtures"
+  ],
+  "provenance": [
+    "https://api.dinero.dk/openapi/v1/swagger.json"
+  ],
+  "utility": {
+    "problem": "Prepare Dinero and inspect your hosted setup",
+    "output": "Offline setup plan and authenticated discovery diagnostics"
+  },
   "appSlug": "dinero",
   "appName": "Dinero",
-  "providerDocs": "https://api.dinero.dk/openapi/v1/swagger.json",
-  "providerWebsite": "https://www.dinero.dk/",
-  "authentication": {
-    "type": "token_exchange",
-    "requiredCredentialFields": [
-      "provider_exchange_credentials"
-    ],
-    "requiredHeaderNames": [],
-    "helpUrl": "https://developer.dinero.dk/documentation/personal-integration/",
-    "tenantRequired": false,
-    "accountParameterNames": [
-      "organization_id"
-    ]
-  },
-  "attributionSlug": "github-dinero-mcp"
+  "maintenanceOnly": true,
+  "executionAuthority": "pipmcp-gateway",
+  "version": "1.0.0",
+  "agentReady": true,
+  "capabilityEvidence": {
+    "local": {
+      "level": "Tested",
+      "operations": [
+        {
+          "name": "gateway_transport",
+          "level": "Tested",
+          "method": "contract-fixture",
+          "evidenceRefs": [
+            "Generated gateway/stdio fixtures"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "Generated gateway/stdio fixtures"
+      ],
+      "mode": "local"
+    },
+    "managed": {
+      "level": "Documented",
+      "operations": [],
+      "evidenceRefs": [],
+      "mode": "managed"
+    }
+  }
 }
